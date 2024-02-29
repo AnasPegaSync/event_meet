@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 
+Route::get('/login', [\App\Http\Controllers\ProfileController::class, 'login'])->name('login');
 Route::get('/dashboard', [\App\Http\Controllers\ProfileController::class, 'index'])->name('dashboard');
 Route::get('/profile_list', [\App\Http\Controllers\ProfileController::class, 'profile_list'])->name('profile_list');

@@ -5,9 +5,21 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="{{route('dashboard')}}" class="logo">
-                        <img src="assets/images/logo.png" alt="PegaSync">
-                    </a>
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="{{route('dashboard')}}" class="inc-logo">
+                                <img src="assets/images/inc-logo-white.png" alt="InC Logo">
+                            </a>
+                        </div>
+                        <div class="col-8"></div>
+                        <div class="col-2">
+                            <a href="{{route('dashboard')}}" class="logo" style="float: right;">
+                                <img src="assets/images/logo.png" alt="PegaSync">
+                            </a>
+                        </div>
+
+                    </div>
+
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     {{-- <ul class="nav">

@@ -41,6 +41,10 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+.fab, .fa {
+    color: #26a69a;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -244,7 +248,7 @@ Header Style
 }
 
 .header-area {
-  background-color: #33384b;
+  background-color: #64feda;
   position: absolute;
   height: 54px;
   top: 0;
@@ -260,7 +264,8 @@ Header Style
 .header-area .main-nav {
   min-height: 80px;
   background: transparent;
-  display: flex
+  margin-top: 7px;
+  /* display: flex; */
 }
 
 .header-area .main-nav .logo {
@@ -272,12 +277,18 @@ Header Style
   transition: all 0.3s ease 0s;
 }
 
+.inc-logo img{
+    width: 50px;
+}
+
 .header-area .main-nav .logo img {
-  max-width: 142px;
+  max-width: 75px;
+  margin-top: -3px;
+  margin-right: 8px;
 }
 
 .background-header .main-nav .logo {
-  width: 142px;
+  width: 122px;
 }
 
 .header-area .main-nav .nav {
@@ -934,7 +945,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 0px;
   padding-bottom: 50px;
   text-align: center;
 }
