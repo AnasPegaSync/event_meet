@@ -69,6 +69,28 @@
         .dt-container {
             font-size: 14px;
         }
+
+        #loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            margin-left:250px;
+            margin-top:250px;
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 @endsection
 
@@ -96,6 +118,7 @@
                 ajax: "{{ route('profile_list') }}",
                 autoWidth: false,
                 lengthMenu: [[5], ['5']],
+                oLanguage: {sProcessing: "<div id='loader'></div>",
                 columns: [
                     {data: 'DT_RowIndex', orderable: false, searchable: false},
                     {data: 'name', name: 'name'},
