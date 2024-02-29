@@ -118,7 +118,7 @@
                 ajax: "{{ route('profile_list') }}",
                 autoWidth: false,
                 lengthMenu: [[5], ['5']],
-                oLanguage: {sProcessing: "<div id='loader'></div>",
+                oLanguage: {sProcessing: "<div id='loader'></div>"},
                 columns: [
                     {data: 'DT_RowIndex', orderable: false, searchable: false},
                     {data: 'name', name: 'name'},
