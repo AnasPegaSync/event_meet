@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('phone_number')->nullable();
             $table->string('email_address')->nullable();
             $table->string('linkedin_url')->nullable();
+            $table->string('picture_path')->nullable();
             $table->timestamps();
         });
     }
