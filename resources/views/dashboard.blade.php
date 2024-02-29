@@ -94,7 +94,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('profile_list') }}",
-                autoWidth: true,
+                autoWidth: false,
                 lengthMenu: [[5], ['5']],
                 columns: [
                     {data: 'DT_RowIndex', orderable: false, searchable: false},
