@@ -60,22 +60,22 @@ class ProfileController extends Controller
 
                 if($data->picture_path != null)
                 {
-                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="'.asset('storage/'.$data->picture_path).'" data-lity data-lity-target="'.asset('storage/'.$data->picture_path).'"><i class="fa fa-solid fa-image"></i></a>';
+                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="'.asset('storage/'.$data->picture_path).'" data-lity data-lity-target="'.asset('storage/'.$data->picture_path).'" style="border-radius: 50%"><i class="fa fa-solid fa-image"></i></a>';
                 }
 
                 if($data->phone_number != null)
                 {
-                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="https://wa.me/'.$data->phone_number.'" target="_blank"><i class="fab fa-whatsapp"></i></a>';
+                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="https://wa.me/'.$data->phone_number.'" target="_blank" style="border-radius: 50%"><i class="fab fa-whatsapp"></i></a>';
                 }
 
                 if($data->linkedin_url != null)
                 {
-                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="'.$data->linkedin_url.'" target="_blank"><i class="fab fa-linkedin-in"></i></a>';
+                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="'.$data->linkedin_url.'" target="_blank" style="border-radius: 50%"><i class="fab fa-linkedin-in"></i></a>';
                 }
 
                 if($data->email_address != null)
                 {
-                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="mailto:'.$data->email_address.'" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>';
+                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="mailto:'.$data->email_address.'" target="_blank" style="border-radius: 50%"><i class="fa fa-envelope" aria-hidden="true"></i></a>';
                 }
 
                 return $buttons;
