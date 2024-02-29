@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
     public function store(Request $request){
-
         $rules = [
             'name' => 'nullable',
             'phone_number' => 'nullable',
