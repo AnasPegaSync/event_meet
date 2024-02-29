@@ -12,6 +12,7 @@
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email Address</th>
+                    <th>Picture</th>
                     {{--                <th>Picture</th>--}}
                 </tr>
                 </thead>
@@ -25,6 +26,18 @@
 @section('css')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" rel="stylesheet">
+    <style>
+        li.paginate_button.page-item.active a, .btn-custom-blue {
+            background: #00bdfe !important;
+            border: #00bdfe;
+        }
+
+        .linkedin-logo{
+            float: right;
+            margin-right: 5%;
+        }
+    </style>
 @endsection
 
 @section('js')
@@ -33,6 +46,7 @@
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
 
     <script type="text/javascript">
         $(function () {
@@ -40,11 +54,13 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('profile_list') }}",
+                lengthMenu: [[-1], ['All']],
                 columns: [
                     {data: 'DT_RowIndex', orderable: false, searchable: false},
                     {data: 'name', name: 'name'},
                     {data: 'phone_number', name: 'phone_number'},
                     {data: 'email_address', name: 'email_address'},
+                    {data: 'picture_path', name: 'picture_path'},
                     // {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });
