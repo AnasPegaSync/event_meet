@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('dashboard');
 });
+
+
+Route::get('/dashboard', [\App\Http\Controllers\ProfileController::class, 'index'])->name('dashboard');
+Route::get('/profile_list', [\App\Http\Controllers\ProfileController::class, 'profile_list'])->name('profile_list');
