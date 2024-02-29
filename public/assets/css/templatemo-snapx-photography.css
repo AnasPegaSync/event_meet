@@ -20,16 +20,16 @@ Table of contents
 09. footer
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -111,10 +111,10 @@ img {
   overflow: hidden;
 }
 
-/* 
+/*
 ---------------------------------------------
 Global Styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -244,9 +244,9 @@ Header Style
 }
 
 .header-area {
-  background-color: #fff;
+  background-color: #33384b;
   position: absolute;
-  height: 70px;
+  height: 54px;
   top: 0;
   left: 0;
   right: 0;
@@ -282,7 +282,7 @@ Header Style
 
 .header-area .main-nav .nav {
   flex-basis: 60%;
-  height: 70px;
+  height: 54px;
   margin-top: 0px;
   margin-right: 0px;
   -webkit-transition: all 0.3s ease 0s;
@@ -537,7 +537,7 @@ Header Style
 }
 
 .header-area.header-sticky {
-  min-height: 70px;
+  min-height: 54px;
 }
 
 .header-area.header-sticky .nav li a.active {
@@ -934,13 +934,13 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
 .main-banner h2 {
-  color: #fff;
+  color: #32384b;
   font-size: 64px;
   font-weight: 700;
   line-height: 74px;
@@ -2519,10 +2519,10 @@ section.contact-us .info-item a:hover {
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Responsive Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 body {

@@ -29,7 +29,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" rel="stylesheet">
     <style>
         li.paginate_button.page-item.active a, .btn-custom-blue {
-            background: #00bdfe !important;
+            background: #33384b !important;
             border: #00bdfe;
         }
 

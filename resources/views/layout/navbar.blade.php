@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <nav class="main-nav justify-content-center">
+                <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="{{route('dashboard')}}" class="logo text-center">
+                    <a href="{{route('dashboard')}}" class="logo">
                         <img src="assets/images/logo.png" alt="PegaSync">
                     </a>
                     <!-- ***** Logo End ***** -->
