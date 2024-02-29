@@ -25,7 +25,7 @@ class ApiController extends Controller
         if ($validate->fails()) {
             return response()->json(['status' => 1, 'message' => 'Error(s) in Input', 'errors' => $validate->errors()]);
         } else {
-            if ($request->name != null || $request->phone_number != null || $request->email_address != null || $request->linkedin_url != null) {
+            if ($request->name != null || $request->phone_number != null || $request->email_address != null || $request->linkedin_url != null || $request->picture != null) {
 
                 if ($request->has('email_address') && $request->email_address != null) {
                     Mail::to($request->email_address)->send(new SendEmailNotification());
@@ -55,7 +55,7 @@ class ApiController extends Controller
         }
     }
 
-    public function profile_list(Request $request){
+    public function profile_list(){
         $profiles = Profile::get();
 
         return response()->json(['status' => 202, 'profiles' => $profiles]);
