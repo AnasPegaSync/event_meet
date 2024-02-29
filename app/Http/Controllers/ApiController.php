@@ -55,7 +55,7 @@ class ApiController extends Controller
         }
     }
 
-    public function profile_list(Request $request){
+    public function profile_list(){
         $profiles = Profile::get();
 
         return response()->json(['status' => 202, 'profiles' => $profiles]);
