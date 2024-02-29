@@ -66,8 +66,8 @@
             border-top: none !important;
         }
 
-        .dt-container {
-            font-size: 14px;
+        div.dt-processing > div:last-child > div {
+            background-color: #64feda;
         }
     </style>
 @endsection
