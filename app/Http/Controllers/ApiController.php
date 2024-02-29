@@ -23,7 +23,7 @@ class ApiController extends Controller
         $validate = Validator::make($request->all(), $rules);
 
         if ($validate->fails()) {
-            return response()->json(['status' => 1, 'message' => 'Error(s) in Input', 'errors' => $validate->errors()]);
+            return response()->json(['status' => 0, 'message' => 'Error(s) in Input', 'errors' => $validate->errors()]);
         } else {
             if ($request->name != null || $request->phone_number != null || $request->email_address != null || $request->linkedin_url != null || $request->picture != null) {
 
@@ -48,9 +48,9 @@ class ApiController extends Controller
                     $profile->save();
                 }
 
-                return response()->json(['message' => 'Profile created successfully'], 200);
+                return response()->json(['status' => 1, 'message' => 'Profile created successfully'], 200);
             } else {
-                return response()->json(['message' => 'Invalid Data'], 200);
+                return response()->json(['status' => 1, 'message' => 'Invalid Data'], 200);
             }
         }
     }
@@ -58,6 +58,6 @@ class ApiController extends Controller
     public function profile_list(){
         $profiles = Profile::get();
 
-        return response()->json(['status' => 202, 'profiles' => $profiles]);
+        return response()->json(['status' => 1, 'profiles' => $profiles]);
     }
 }
