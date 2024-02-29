@@ -13,7 +13,7 @@
                     <td>Phone Number</td>
                     <td>Email Address</td>
                     <td>Added At</td>
-                    <td>Action</td>
+                    <td>Actions</td>
                     {{--                <th>Picture</th>--}}
                 </tr>
                 </thead>
@@ -58,6 +58,10 @@
             border-color: #64feda;
         }
 
+        .page-item .page-link {
+            color: #26a69a;
+        }
+
         .table>:not(:first-child){
             border-top: none !important;
         }
@@ -90,6 +94,7 @@
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('profile_list') }}",
+                autoWidth: true,
                 lengthMenu: [[5], ['5']],
                 columns: [
                     {data: 'DT_RowIndex', orderable: false, searchable: false},
