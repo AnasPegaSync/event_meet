@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function store(Request $request){
+    public function profile_store(Request $request){
         $rules = [
             'name' => 'nullable',
             'phone_number' => 'nullable',
@@ -53,5 +53,11 @@ class ApiController extends Controller
                 return response()->json(['message' => 'Invalid Data'], 200);
             }
         }
+    }
+
+    public function profile_list(Request $request){
+        $profiles = Profile::get();
+
+        return response()->json(['status' => 202, 'profiles' => $profiles]);
     }
 }
