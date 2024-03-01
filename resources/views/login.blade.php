@@ -14,10 +14,10 @@
                         </a>
                     </div>
                     <div class="form-group pb-2">
-                        <input type="text" class="form-control" placeholder="Enter email*" id="email" name="email" autofocus tabindex="1"/>
+                        <input type="text" class="form-control" placeholder="Enter username*" id="email" name="email" autofocus tabindex="1" required/>
                     </div>
                     <div class="form-group pb-4">
-                        <input type="password" placeholder="Enter password*" class="form-control form-control-merge" id="password" name="password" tabindex="2" />
+                        <input type="password" placeholder="Enter password*" class="form-control form-control-merge" id="password" name="password" tabindex="2" required/>
                     </div>
 
                     @if (session()->has('error'))
