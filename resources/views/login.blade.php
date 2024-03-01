@@ -53,7 +53,7 @@
             background-color: #fff;
             border-color: #64feda;
             outline: 0;
-            box-shadow: 0 0 0 0.25rem rgb(100 254 218 / 20%);
+            box-shadow: 0 0 0 0.25rem rgb(100 254 218 / 42%);
         }
         /* li.paginate_button.page-item.active a, .btn-custom-blue {
             background: #64feda !important;
