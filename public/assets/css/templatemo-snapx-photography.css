@@ -45,6 +45,22 @@ figure, header, nav, section, article, aside, footer, figcaption {
     color: #26a69a;
 }
 
+.login-logo{
+    text-align: center;
+}
+
+.login-logo a img{
+    width: 40% !important;
+}
+
+.login-box{
+    border: 1px solid #ececec;
+    padding: 80px 40px;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 20px !important;
+}
+
 .clearfix:after {
   content: ".";
   display: block;

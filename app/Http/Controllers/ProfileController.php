@@ -13,8 +13,28 @@ class ProfileController extends Controller
         return view('login');
     }
 
+    public function loginSubmit(Request $request){
+
+        if($request->email == "pegasyncinc" && $request->password =="pegasyncinc@123")
+        {
+            $request->session()->put('key', 'value');
+
+            return redirect()->route('dashboard');
+
+        }
+        else{
+            return redirect()->back()->with('error', 'Invalid username or password');
+        }
+    }
+
     public function index(){
-        return view('dashboard');
+        if(session()->has('key'))
+        {
+            return view('dashboard');
+        }
+        else{
+            return redirect()->route('login');
+        }
     }
 
     public function profile_list(){

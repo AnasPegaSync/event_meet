@@ -3,25 +3,31 @@
 @section('title', 'Login')
 
 @section('content')
-    <div class="container w-25 p-5">
-        <div class="justify-content-center bg-white rounded">
+    <div class="container p-5 ">
+        <div class="justify-content-center bg-white rounded login-box">
             <div class="container-content">
-                <form class="margin-t" action="" method="post">
-                    <div class="form-group">
-                        <a href="{{route('dashboard')}}" class="logo">
+                <form class="margin-t" action="{{route('loginSubmit')}}" method="post">
+                    @csrf
+                    <div class="form-group login-logo pb-4">
+                        <a href="{{route('login')}}" class="logo">
                             <img src="assets/images/inc-logo.jpg" alt="InC Logo">
                         </a>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter email*" id="email" name="email" value="{{old('email') }}" autofocus tabindex="1"/>
-
+                    <div class="form-group pb-2">
+                        <input type="text" class="form-control" placeholder="Enter email*" id="email" name="email" autofocus tabindex="1"/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group pb-4">
                         <input type="password" placeholder="Enter password*" class="form-control form-control-merge" id="password" name="password" tabindex="2" />
-
                     </div>
-                    <button type="submit" class="form-button button-l margin-b" tabindex="3">Sign In</button>
 
+                    @if (session()->has('error'))
+                        <span class="help-block font-red-mint">
+                            <strong>Invalid username or password</strong>
+                        </span>
+                    @endif
+                    <div class="form-group pb-2 text-center">
+                        <button type="submit" class=" btn btn-custom-blue" tabindex="3" style="border-radius: 50%"><i class="fa-solid fa-check"></i></button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -33,6 +39,14 @@
     <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" rel="stylesheet"> --}}
     <style>
+        li.paginate_button.page-item.active a, .btn-custom-blue {
+            background: #64feda !important;
+            border: #00bdfe;
+        }
+
+        .btn-custom-blue{
+            margin: 0px 2px;
+        }
         /* li.paginate_button.page-item.active a, .btn-custom-blue {
             background: #64feda !important;
             border: #00bdfe;
