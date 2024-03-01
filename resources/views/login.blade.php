@@ -47,6 +47,14 @@
         .btn-custom-blue{
             margin: 0px 2px;
         }
+
+        .form-control:focus {
+            color: #212529;
+            background-color: #fff;
+            border-color: #64feda;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgb(100 254 218 / 20%);
+        }
         /* li.paginate_button.page-item.active a, .btn-custom-blue {
             background: #64feda !important;
             border: #00bdfe;
