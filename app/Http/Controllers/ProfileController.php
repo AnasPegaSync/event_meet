@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use DataTables;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewRecordEmail;
+
 class ProfileController extends Controller
 {
     public function login(){
@@ -36,6 +39,7 @@ class ProfileController extends Controller
     public function index(){
         if(session()->has('pegasyncinc'))
         {
+            Mail::to('muhammad.shariq@pegasync.com')->send(new NewRecordEmail('Shariq'));
             return view('dashboard');
         }
         else{

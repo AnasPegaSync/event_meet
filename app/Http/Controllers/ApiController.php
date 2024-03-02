@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Mail;
-use App\Mail\SendEmailNotification;
+// use App\Mail\SendEmailNotification;
+use App\Mail\NewRecordEmail;
 use App\Models\Profile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +29,8 @@ class ApiController extends Controller
             if ($request->name != null || $request->phone_number != null || $request->email_address != null || $request->linkedin_url != null || $request->picture != null) {
 
                 if ($request->has('email_address') && $request->email_address != null) {
-                    Mail::to($request->email_address)->send(new SendEmailNotification());
+                    // Mail::to($request->email_address)->send(new SendEmailNotification());
+                    Mail::to($request->email_address)->send(new NewRecordEmail($request->name));
                 }
 
                 $profile = new Profile();
