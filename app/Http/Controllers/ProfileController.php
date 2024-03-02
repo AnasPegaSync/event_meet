@@ -39,7 +39,7 @@ class ProfileController extends Controller
     public function index(){
         if(session()->has('pegasyncinc'))
         {
-            Mail::to('muhammad.shariq@pegasync.com')->send(new NewRecordEmail('Shariq'));
+            // Mail::to('muhammad.shariq@pegasync.com')->send(new NewRecordEmail('Shariq'));
             return view('dashboard');
         }
         else{
