@@ -30,7 +30,7 @@ class ApiController extends Controller
 
                 if ($request->has('email_address') && $request->email_address != null) {
                     // Mail::to($request->email_address)->send(new SendEmailNotification());
-                    Mail::to($request->email_address)->send(new NewRecordEmail($request->name));
+                    // Mail::to($request->email_address)->send(new NewRecordEmail($request->name));
                 }
 
                 $profile = new Profile();
