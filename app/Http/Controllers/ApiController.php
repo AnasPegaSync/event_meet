@@ -28,11 +28,12 @@ class ApiController extends Controller
             return response()->json(['status' => 0, 'message' => 'Error(s) in Input', 'errors' => $validate->errors()]);
         } else {
 
-            $user_id = 1;
-
-            if($request->has('user_id') && $request->user_id != 1)
+            if($request->has('user_id') && $request->user_id != '')
             {
                 $user_id = $request->user_id;
+            }
+            else{
+                $user_id = 1;
             }
 
             if ($request->name != null || $request->phone_number != null || $request->email_address != null || $request->linkedin_url != null || $request->picture != null)
@@ -68,7 +69,15 @@ class ApiController extends Controller
         }
     }
 
-    public function profile_list($user_id){
+    public function profile_list(Request $request){
+        if($request->has('user_id') && $request->user_id != '')
+        {
+            $user_id = $request->user_id;
+        }
+        else{
+            $user_id = 1;
+        }
+
         $profiles = Profile::where('user_id',$user_id)->get();
         return response()->json(['status' => 1, 'profiles' => $profiles]);
     }

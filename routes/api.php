@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/profile_store', [ApiController::class, 'profile_store']);
-Route::get('/profile_list/{user_id}', [ApiController::class, 'profile_list']);
+Route::get('/profile_list', [ApiController::class, 'profile_list']);
