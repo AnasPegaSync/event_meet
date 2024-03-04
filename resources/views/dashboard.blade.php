@@ -97,6 +97,7 @@
                 ajax: "{{ route('profile_list') }}",
                 autoWidth: false,
                 lengthMenu: [[5], ['5']],
+                order: [[5, 'desc']],
                 columns: [
                     {data: 'DT_RowIndex', orderable: false, searchable: false},
                     {data: 'name', name: 'name'},
