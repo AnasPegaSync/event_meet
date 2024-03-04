@@ -11,7 +11,7 @@
 
     @endif
 
-    <p>It was a pleasure connecting with you at Paklaunch.</p>
+    <p>It was a pleasure connecting with you.</p>
 
     <p>As discussed, I am part of a Tech company called PegaSync (<a href="https://pegasync.com/">https://pegasync.com/</a>) which has been set up to leverage the most underrated and underpaid tech talent we have in Pakistan as exchange rates have taken a major beating in the past year or so. We build amazing Web and App platforms, and hire and manage tech talent for our clients across the globe.</p>
 

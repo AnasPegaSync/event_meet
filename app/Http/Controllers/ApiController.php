@@ -28,11 +28,6 @@ class ApiController extends Controller
         } else {
             if ($request->name != null || $request->phone_number != null || $request->email_address != null || $request->linkedin_url != null || $request->picture != null) {
 
-                if ($request->has('email_address') && $request->email_address != null) {
-                    // Mail::to($request->email_address)->send(new SendEmailNotification());
-                    Mail::to($request->email_address)->send(new NewRecordEmail($request->name));
-                }
-
                 $profile = new Profile();
                 $profile->name = $request->name;
                 $profile->phone_number = $request->phone_number;
@@ -48,6 +43,11 @@ class ApiController extends Controller
                     $profile->picture_path = $picture_path;
 
                     $profile->save();
+                }
+
+		 if ($request->has('email_address') && $request->email_address != null) {
+                    // Mail::to($request->email_address)->send(new SendEmailNotification());
+                    Mail::to($request->email_address)->send(new NewRecordEmail($request->name));
                 }
 
                 return response()->json(['status' => 1, 'message' => 'Profile created successfully'], 200);

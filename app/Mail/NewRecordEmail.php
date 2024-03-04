@@ -27,7 +27,7 @@ class NewRecordEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('Hassan@pegasync.com', 'Muhammad Hassan Khan'),
+            from: new Address('hassan@pegasync.com', 'Muhammad Hassan Khan'),
         );
     }
 
