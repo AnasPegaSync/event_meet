@@ -12,6 +12,7 @@
                     <td>Name</td>
                     <td>Phone Number</td>
                     <td>Email Address</td>
+                    <td>Added By</td>
                     <td>Added At</td>
                     <td>Actions</td>
                     {{--                <th>Picture</th>--}}
@@ -101,6 +102,7 @@
                     {data: 'name', name: 'name'},
                     {data: 'phone_number', name: 'phone_number'},
                     {data: 'email_address', name: 'email_address'},
+                    {data: 'added_by', name: 'added_by'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'action', searchable: false, orderable: false},
                     // {data: 'action', name: 'action', orderable: false, searchable: false},

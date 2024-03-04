@@ -48,7 +48,8 @@ class ProfileController extends Controller
     }
 
     public function profile_list(){
-        $data = Profile::select('id', 'name', 'phone_number', 'email_address', 'linkedin_url', 'picture_path', 'created_at');
+        $data = Profile::join('users as u', 'u.id', 'profiles.user_id')
+        ->select('profiles.id', 'profiles.name', 'profiles.phone_number', 'profiles.email_address', 'profiles.linkedin_url', 'profiles.picture_path', 'profiles.created_at', 'u.name as added_by');
         return DataTables::of($data)
             ->editColumn('name', function($data){
 
