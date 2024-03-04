@@ -91,7 +91,7 @@ class ProfileController extends Controller
 
                 if($data->picture_path != null)
                 {
-                    $buttons .= '<a class="btn btn-sm btn-custom-blue" target="_blank" href="'.asset('storage/'.$data->picture_path).'" data-lity data-lity-target="'.asset('storage/'.$data->picture_path).'" style="border-radius: 50%"><i class="fa fa-solid fa-image"></i></a>';
+                    $buttons .= '<a class="btn btn-sm btn-custom-blue" href="'.asset('storage/'.$data->picture_path).'" data-lity data-lity-target="'.asset('storage/'.$data->picture_path).'" style="border-radius: 50%"><i class="fa fa-solid fa-image"></i></a>';
                 }
 
                 if($data->phone_number != null)
